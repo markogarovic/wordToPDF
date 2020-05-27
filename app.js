@@ -89,16 +89,13 @@ app.post('/sendMail', (req, res) => {
     var transporter = nodemailer.createTransport({
         service: 'gmail', 
         auth: {
-          user: process.env.MAIL,
-          pass: process.env.PASSWORD
+          user: 'wordtopdf000@gmail.com',
+          pass: 'testiranje069@'
         }
       });
       
-      console.log(req.body.myMail)
-      console.log(req.body.myFile)
-      console.log()
       var mailOptions = {
-        from: `${process.env.MAIL}`,
+        from: `wordtopdf000@gmail.com`,
         to: `${req.body.myMail}`,
         subject: 'Word To PDF',
         attachments: [
