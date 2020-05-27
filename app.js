@@ -90,7 +90,7 @@ app.post('/sendMail', (req, res) => {
         service: 'gmail', 
         auth: {
           user: 'wordtopdf000@gmail.com',
-          pass: 'testiranje069@'
+          pass: process.env.PASSWORD
         }
       });
       
